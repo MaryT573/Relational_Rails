@@ -245,6 +245,7 @@
           1,
           1,
           1,
+          1,
           null
         ]
       },
@@ -305,6 +306,24 @@
           null
         ]
       },
+      "/Users/maryturpin/turing/2Module/projects/relational_rails/spec/features/books/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/maryturpin/turing/2Module/projects/relational_rails/app/models/author.rb": {
         "lines": [
           1,
@@ -350,10 +369,14 @@
           1,
           2,
           null,
+          null,
+          1,
+          1,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1657398537
+    "timestamp": 1657399057
   }
 }
