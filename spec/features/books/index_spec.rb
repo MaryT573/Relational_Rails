@@ -22,4 +22,12 @@ RSpec.describe 'the books index page' do
     expect(page).to have_content(book.updated_at)
   end
 
+  it "links to books index user story 8" do
+    auth = Author.create!(name: "john doe", alive: false, number_books: 10)
+    book = auth.books.create!(title: "Titled Turtles: A love story", publication_date: 2057, fiction: true)
+    visit '/authors'
+    click_link 'Books'
+
+    expect(page).to have_link("Books", :href=>"/books")
+  end
 end
