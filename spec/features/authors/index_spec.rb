@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'the authors index page' do
-  it 'displays authors name' do
+  it 'displays authors name user story 1' do
     auth = Author.create!(name: "john doe", alive: false, number_books: 10)
     auth2 = Author.create!(name: "Will Smith", alive: true, number_books: 20)
     visit "/authors"
@@ -10,7 +10,7 @@ RSpec.describe 'the authors index page' do
     expect(page).to have_content(auth2.name)
   end
 
-  it 'sorts by most recently created' do
+  it 'sorts by most recently created user story 6' do
     auth = Author.create!(name: "john doe", alive: false, number_books: 10)
     auth2 = Author.create!(name: "Will Smith", alive: true, number_books: 20)
     visit "/authors"
