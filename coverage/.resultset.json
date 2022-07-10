@@ -256,6 +256,34 @@
           null
         ]
       },
+      "/Users/maryturpin/turing/2Module/projects/relational_rails/spec/features/authors/index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/maryturpin/turing/2Module/projects/relational_rails/spec/features/authors/show_spec.rb": {
         "lines": [
           1,
@@ -275,6 +303,15 @@
           1,
           1,
           1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
           1,
           null,
           null
@@ -334,6 +371,10 @@
           null,
           1,
           2,
+          2,
+          2,
+          2,
+          2,
           null
         ]
       },
@@ -341,6 +382,14 @@
         "lines": [
           1,
           1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          3,
+          null,
+          null,
           null
         ]
       },
@@ -357,12 +406,35 @@
           null,
           1,
           2,
+          2,
+          2,
+          2,
+          2,
           null
         ]
       },
       "/Users/maryturpin/turing/2Module/projects/relational_rails/app/models/book.rb": {
         "lines": [
           1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/maryturpin/turing/2Module/projects/relational_rails/app/controllers/author_books_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/maryturpin/turing/2Module/projects/relational_rails/app/controllers/application_controller.rb": {
+        "lines": [
           1,
           null
         ]
@@ -371,18 +443,12 @@
         "lines": [
           1,
           1,
-          1,
+          3,
           null,
           null,
           1,
-          2,
+          3,
           null,
-          null
-        ]
-      },
-      "/Users/maryturpin/turing/2Module/projects/relational_rails/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
           null
         ]
       },
@@ -400,6 +466,6 @@
         ]
       }
     },
-    "timestamp": 1657416382
+    "timestamp": 1657487128
   }
 }
