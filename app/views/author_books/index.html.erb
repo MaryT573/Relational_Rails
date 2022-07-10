@@ -1,0 +1,9 @@
+<h1><%= @author.name %></h1>
+<h2>List of Books:</h2
+  <% @books.each do |book| %>
+  <h3> Title: <%= book.title %> </h3>
+  <p>Fiction?: <%= book.fiction %></p>
+  <p>Book published: <%= book.publication_date%></p>
+  <p>Created at: <%= book.created_at%></p>
+  <p>Updated at: <%= book.updated_at%></p>
+  <% end %>

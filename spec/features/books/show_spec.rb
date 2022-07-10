@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'the books show page' do
   it 'displays book and attributes' do
-    book = Book.create!(title: "Titled Turtles: A love story", publication_date: 2057, fiction: true)
+    auth = Author.create!(name: "john doe", alive: false, number_books: 10)
+    book = auth.books.create!(title: "Titled Turtles: A love story", publication_date: 2057, fiction: true)
     visit "/books/#{book.id}"
 
     expect(page).to have_content(book.title)

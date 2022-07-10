@@ -2,8 +2,9 @@ require 'rails_helper'
 
 RSpec.describe 'the books index page' do
   it 'displays books title' do
-    book = Book.create!(title: "Titled Turtles: A love story", publication_date: 2057, fiction: true)
-    book2 = Book.create!(title: "Why", publication_date: 1667, fiction: false)
+    auth = Author.create!(name: "john doe", alive: false, number_books: 10)
+    book = auth.books.create!(title: "Titled Turtles: A love story", publication_date: 2057, fiction: true)
+    book2 = auth.books.create!(title: "Why", publication_date: 1667, fiction: false)
     visit "/books"
 
     expect(page).to have_content(book.title)
@@ -11,7 +12,8 @@ RSpec.describe 'the books index page' do
   end
 
   it 'displays book attributes' do
-    book = Book.create!(title: "Titled Turtles: A love story", publication_date: 2057, fiction: true)
+    auth = Author.create!(name: "john doe", alive: false, number_books: 10)
+    book = auth.books.create!(title: "Titled Turtles: A love story", publication_date: 2057, fiction: true)
     visit "/books"
 
     expect(page).to have_content(book.publication_date)
