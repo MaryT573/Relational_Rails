@@ -10,4 +10,19 @@ RSpec.describe 'the authors books index page' do
     expect(page).to have_content(book.title)
     expect(page).to have_content(book2.title)
   end
+
+  it "creates a new book associated with author user story 13" do
+    auth = Author.create!(name: "john doe", alive: false, number_books: 10)
+    visit "/authors/#{auth.id}/books"
+    click_link 'New Book'
+    expect(current_path).to eq("/authors/#{auth.id}/books/new")
+    fill_in 'title', with: 'Cats!'
+    fill_in 'publication_date', with: 1378
+    select 'non-fiction', from: 'fiction'
+    click_on 'Create Book'
+    visit "/authors/#{auth.id}/books"
+    expect(page).to have_content('Cats')
+    expect(page).to have_content('Book published: 1378')
+    expect(page).to have_content('Fiction?: false')
+  end
 end
