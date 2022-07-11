@@ -40,7 +40,7 @@ RSpec.describe 'the authors show page' do
     auth = Author.create!(name: "john doe", alive: true, number_books: 10)
     visit "/authors/#{auth.id}"
     click_link "Update Author"
-    expect(current_path).to eq("/authors/#{auth.id}")
+    expect(current_path).to eq("/authors/#{auth.id}/edit")
     fill_in 'name', with: 'Carl'
     fill_in 'number_books', with: 20
     select 'dead', from: 'alive'
