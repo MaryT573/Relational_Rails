@@ -1,5 +1,5 @@
 <%= link_to "Books", '/books' %>
-<h1><%= @author.name %></h1>
+<%= link_to "Authors", '/authors' %>
 <h2>List of Books:</h2>
   <% @books.each do |book| %>
   <h3> Title: <%= book.title %> </h3>
