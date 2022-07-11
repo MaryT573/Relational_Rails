@@ -4,6 +4,9 @@
   <%= form.label :number_books %>
   <%= form.number_field :number_books %>
   <%= form.label :alive %>
-  <%= form.text_field :alive %>
+  <%= form.radio_button :alive, "true" %>
+  <%= form.label :alive, "true" %>
+  <%= form.radio_button :alive, "false" %>
+  <%= form.label :alive, "false" %>
   <%= form.submit "Create Author" %>
 <% end %>
