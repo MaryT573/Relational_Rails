@@ -35,4 +35,19 @@ RSpec.describe 'the authors show page' do
     click_on "Author's Book"
     expect(current_path).to eq("/authors/#{auth.id}/books")
   end
+
+  it 'can update parent user story 12' do
+    auth = Author.create!(name: "john doe", alive: true, number_books: 10)
+    visit "/authors/#{auth.id}"
+    click_link "Update Author"
+    expect(current_path).to eq("/authors/#{auth.id}")
+    fill_in 'name', with: 'Carl'
+    fill_in 'number_books', with: 20
+    select 'dead', from: 'alive'
+    click_on 'Submit Changes'
+    expect(current_path).to eq("/authors/#{auth.id}")
+    expect(page).to have_content('Carl')
+    expect(page).to have_content('Number of Books: 20')
+    expect(page).to have_content('Is author living?: false')
+  end
 end
