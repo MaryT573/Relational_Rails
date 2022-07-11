@@ -26,4 +26,13 @@ RSpec.describe 'the authors show page user story 2' do
 
     expect(page).to have_content("Number of Books: 2")
   end
+
+  it "links to authors book user story 10" do
+    auth = Author.create!(name: "john doe", alive: false, number_books: 10)
+    book = auth.books.create!(title: "Titled Turtles: A love story", publication_date: 2057, fiction: true)
+    visit "/authors/#{auth.id}"
+    expect(page).to have_link("Author's Book")
+    click_on "Author's Book"
+    expect(current_path).to eq("/authors/#{auth.id}/books")
+  end
 end

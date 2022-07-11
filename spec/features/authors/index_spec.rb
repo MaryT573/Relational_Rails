@@ -26,8 +26,8 @@ RSpec.describe 'the authors index page' do
     auth = Author.create!(name: "john doe", alive: false, number_books: 10)
     book = auth.books.create!(title: "Titled Turtles: A love story", publication_date: 2057, fiction: true)
     visit '/books'
+    expect(page).to have_link("Authors")
     click_on "Authors"
-
     expect(current_path).to eq("/authors")
   end
 end
