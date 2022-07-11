@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'the authors show page user story 2' do
+RSpec.describe 'the authors show page' do
   it 'displays authors name' do
     auth = Author.create!(name: "john doe", alive: false, number_books: 10)
     visit "/authors/#{auth.id}"
@@ -24,7 +24,7 @@ RSpec.describe 'the authors show page user story 2' do
     book2 = auth.books.create!(title: "Why", publication_date: 1667, fiction: false)
     visit "/authors/#{auth.id}"
 
-    expect(page).to have_content("Number of Books: 2")
+    expect(page).to have_content("Number of Books in Catalog: 2")
   end
 
   it "links to authors book user story 10" do

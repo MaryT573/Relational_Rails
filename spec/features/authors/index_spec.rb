@@ -37,7 +37,7 @@ RSpec.describe 'the authors index page' do
     expect(current_path).to eq('/authors/new')
     fill_in 'name', with: 'Carl'
     fill_in 'number_books', with: 20
-    fill_in 'alive', with: true
+    select 'dead', from: 'alive'
     click_on 'Create Author'
     expect(current_path).to eq("/authors")
     expect(page).to have_content('Carl')
