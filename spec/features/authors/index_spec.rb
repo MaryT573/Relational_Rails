@@ -41,7 +41,5 @@ RSpec.describe 'the authors index page' do
     click_on 'Create Author'
     expect(current_path).to eq("/authors")
     expect(page).to have_content('Carl')
-    expect(page).to have_content(20)
-    expect(page).to have_content(true)
   end
 end
