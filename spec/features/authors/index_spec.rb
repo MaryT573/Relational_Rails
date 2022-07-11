@@ -30,4 +30,18 @@ RSpec.describe 'the authors index page' do
     click_on "Authors"
     expect(current_path).to eq("/authors")
   end
+
+  it 'links creates new authors user story 11' do
+    visit '/authors'
+    click_link 'New Author'
+    expect(current_path).to eq('/authors/new')
+    fill_in 'name', with: 'Carl'
+    fill_in 'number_books', with: 20
+    fill_in 'alive', with: true
+    click_on 'Create Author'
+    expect(current_path).to eq("/authors")
+    expect(page).to have_content('Carl')
+    expect(page).to have_content(20)
+    expect(page).to have_content(true)
+  end
 end
