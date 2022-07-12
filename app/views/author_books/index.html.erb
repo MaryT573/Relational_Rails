@@ -8,6 +8,7 @@
   <p>Created at: <%= book.created_at%></p>
   <p>Updated at: <%= book.updated_at%></p>
   <%= link_to "Edit #{book.title}", "/books/#{book.id}/edit" %>
+  <%= link_to "Delete #{book.title}", "/books/#{book.id}", method: :delete %>
   <% end %>
   <%= link_to "New Book", "/authors/#{@author.id}/books/new" %>
   <%= link_to "Sort Alphabetically", "/authors/#{@author.id}/books?sort=alpha" %>

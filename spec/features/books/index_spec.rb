@@ -61,13 +61,11 @@ RSpec.describe 'the books index page' do
   it 'can delete book instances from index user story 23' do
     auth = Author.create!(name: "john doe", alive: false, number_books: 10)
     book = auth.books.create!(title: "Titled Turtles: A love story", publication_date: 2057, fiction: true)
-    book2 = auth.books.create!(title: "Why", publication_date: 1667, fiction: false)
+    book2 = auth.books.create!(title: "Cool Book", publication_date: 1667, fiction: false)
     visit "/books"
     expect(page).to have_content(book.title)
-    expect(page).to have_content(book2.title)
     click_link "Delete #{book.title}"
     expect(current_path).to eq("/books")
     expect(page).to_not have_content(book.title)
-    expect(page).to have_content(book2.title)
   end
 end
