@@ -25,4 +25,14 @@ RSpec.describe 'the authors books index page' do
     expect(page).to have_content('Book published: 1378')
     expect(page).to have_content('Fiction?: false')
   end
+
+  it "has a link that can sort books in alphabetical order user story 16" do
+    auth = Author.create!(name: "john doe", alive: false, number_books: 10)
+    book2 = auth.books.create!(title: "Why", publication_date: 1667, fiction: false)
+    book = auth.books.create!(title: "Titled Turtles: A love story", publication_date: 2057, fiction: true)
+    visit "/authors/#{auth.id}/books"
+    click_on "Sort Alphabetically"
+    expect(current_path).to eq("/authors/#{auth.id}/books?sort=alpha")
+    expect(book.title).to appear_before(book2.title)
+  end
 end
