@@ -16,4 +16,9 @@ class BooksController < ApplicationController
     book.update(title: params[:title], publication_date: params[:publication_date], fiction: params[:fiction])
     redirect_to "/books/#{book.id}"
   end
+
+  def destroy
+    Book.destroy(params[:id])
+    redirect_to "/books"
+  end
 end
