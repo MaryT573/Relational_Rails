@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'the authors show page' do
-  it 'displays authors name' do
+  it 'displays authors name user story 2' do
     auth = Author.create!(name: "john doe", alive: false, number_books: 10)
     visit "/authors/#{auth.id}"
 
