@@ -36,7 +36,7 @@ RSpec.describe 'the authors show page' do
     expect(current_path).to eq("/authors/#{auth.id}/books")
   end
 
-  it 'can update parent user story 12' do
+  it 'can update author information user story 12' do
     auth = Author.create!(name: "john doe", alive: true, number_books: 10)
     visit "/authors/#{auth.id}"
     click_link "Update Author"

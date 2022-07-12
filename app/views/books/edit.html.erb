@@ -1,0 +1,8 @@
+<%= form_with url: "/books/#{@book_edit.id}", method: :patch, local: true do |form|%>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+  <%= form.label :publication_date %>
+  <%= form.number_field :publication_date %>
+  <%= form.select :fiction, [['fiction', true], ['non-fiction', false]] %>
+  <%= form.submit "Update Book" %>
+<% end %>
