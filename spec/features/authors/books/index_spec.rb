@@ -32,7 +32,7 @@ RSpec.describe 'the authors books index page' do
     book = auth.books.create!(title: "Titled Turtles: A love story", publication_date: 2057, fiction: true)
     visit "/authors/#{auth.id}/books"
     click_on "Sort Alphabetically"
-    expect(current_path).to eq("/authors/#{auth.id}/books?sort=alpha")
+    expect(current_path).to eq("/authors/#{auth.id}/books")
     expect(book.title).to appear_before(book2.title)
   end
 end

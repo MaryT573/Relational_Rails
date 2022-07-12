@@ -9,3 +9,4 @@
   <p>Updated at: <%= book.updated_at%></p>
   <% end %>
   <%= link_to "New Book", "/authors/#{@author.id}/books/new" %>
+  <%= link_to "Sort Alphabetically", "/authors/#{@author.id}/books?sort=alpha" %>

@@ -7,4 +7,8 @@ class Book < ApplicationRecord
   def self.true_bool
     where(fiction: true)
   end
+
+  def self.sort_alpha
+    order(:title)
+  end
 end
