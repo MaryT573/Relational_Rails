@@ -1,6 +1,6 @@
 <%= link_to "Authors", '/authors' %>
 <h1> Books </h1>
-<% @books.each do |book| %>
+<% @books.true_bool.each do |book| %>
   <h2>Title: <%= book.title %></h2>
   <p>Publication Year: <%= book.publication_date %></p>
   <p>Fiction?: <%= book.fiction %></p>
