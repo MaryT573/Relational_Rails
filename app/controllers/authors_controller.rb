@@ -25,4 +25,9 @@ class AuthorsController < ApplicationController
     author.update(name: params[:name], number_books: params[:number_books], alive: params[:alive])
     redirect_to "/authors/#{author.id}"
   end
+
+  def destroy
+    Author.destroy(params[:id])
+    redirect_to "/authors"
+  end
 end
