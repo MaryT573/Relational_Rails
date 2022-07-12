@@ -42,4 +42,20 @@ RSpec.describe 'the authors index page' do
     expect(current_path).to eq("/authors")
     expect(page).to have_content('Carl')
   end
+
+  it 'links to edit page from each parent instance user story 17' do
+    auth = Author.create!(name: "john doe", alive: false, number_books: 10)
+    auth2 = Author.create!(name: "Will Smith", alive: true, number_books: 20)
+    visit '/authors'
+    click_link "Edit #{auth.name}"
+    expect(current_path).to eq("/authors/#{auth.id}/edit")
+    fill_in 'name', with: 'Carl'
+    fill_in 'number_books', with: 20
+    select 'dead', from: 'alive'
+    click_on 'Submit Changes'
+    expect(current_path).to eq("/authors/#{auth.id}")
+    expect(page).to have_content('Carl')
+    expect(page).to have_content('Number of Books: 20')
+    expect(page).to have_content('Is author living?: false')
+  end
 end
