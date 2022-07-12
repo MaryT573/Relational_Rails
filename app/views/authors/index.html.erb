@@ -1,6 +1,7 @@
 <%= link_to "Books", '/books' %>
 <h1> Authors </h1>
 <% @authors.ordered_by_create.each do |author| %>
-<p><%= author.name %></p>
+  <p><%= author.name %></p>
+  <%= link_to "Edit #{author.name}", "/authors/#{author.id}/edit" %>
 <% end %>
 <%= link_to "New Author", '/authors/new' %>
