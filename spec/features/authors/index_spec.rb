@@ -63,9 +63,11 @@ RSpec.describe 'the authors index page' do
     auth = Author.create!(name: "john doe", alive: false, number_books: 10)
     auth2 = Author.create!(name: "Will Smith", alive: true, number_books: 20)
     visit '/authors'
+    expect(page).to have_content(auth2.name)
+    expect(page).to have_content(auth.name)
     click_link "Delete #{auth.name}"
     expect(current_path).to eq("/authors")
-    expect(page).to have_content(auth2.title)
-    expect(page).to_not have_content(auth.title)
+    expect(page).to have_content(auth2.name)
+    expect(page).to_not have_content(auth.name)
   end
 end

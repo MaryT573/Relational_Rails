@@ -3,5 +3,6 @@
 <% @authors.ordered_by_create.each do |author| %>
   <p><%= author.name %></p>
   <%= link_to "Edit #{author.name}", "/authors/#{author.id}/edit" %>
+  <%= link_to "Delete #{author.name}", "/authors/#{author.id}", method: :delete %>
 <% end %>
 <%= link_to "New Author", '/authors/new' %>
