@@ -52,4 +52,17 @@ RSpec.describe 'the authors books index page' do
     expect(page).to have_content('Book published: 1378')
     expect(page).to have_content('Fiction?: false')
   end
+
+  xit "can delete book instances from author's book index user story 23" do
+    auth = Author.create!(name: "john doe", alive: false, number_books: 10)
+    book = auth.books.create!(title: "Titled Turtles: A love story", publication_date: 2057, fiction: true)
+    book2 = auth.books.create!(title: "Why", publication_date: 1667, fiction: false)
+    visit "/authors/#{auth.id}/books"
+    expect(page).to have_content("Title: Titled Turtles: A love story")
+    expect(page).to have_content("Title: Why")
+    click_link "Delete #{book.title}"
+    expect(current_path).to eq("/authors/#{auth.id}/books")
+    expect(page).to_not have_content(book.title)
+    expect(page).to have_content(book2.title)
+  end
 end
