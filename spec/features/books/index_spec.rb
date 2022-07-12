@@ -4,7 +4,7 @@ RSpec.describe 'the books index page' do
   it 'displays books title user story 3' do
     auth = Author.create!(name: "john doe", alive: false, number_books: 10)
     book = auth.books.create!(title: "Titled Turtles: A love story", publication_date: 2057, fiction: true)
-    book2 = auth.books.create!(title: "Why", publication_date: 1667, fiction: false)
+    book2 = auth.books.create!(title: "Why", publication_date: 1667, fiction: true)
     visit "/books"
 
     expect(page).to have_content(book.title)
@@ -29,5 +29,15 @@ RSpec.describe 'the books index page' do
     click_on "Books"
 
     expect(current_path).to eq("/books")
+  end
+
+  it "only displays books with fiction == true user story 15" do
+    auth = Author.create!(name: "john doe", alive: false, number_books: 10)
+    book = auth.books.create!(title: "Titled Turtles: A love story", publication_date: 2057, fiction: true)
+    book2 = auth.books.create!(title: "Why", publication_date: 1667, fiction: false)
+    visit "/books"
+
+    expect(page).to have_content(book.title)
+    expect(page).to_not have_content(book2.title)
   end
 end
