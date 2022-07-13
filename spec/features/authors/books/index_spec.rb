@@ -63,4 +63,18 @@ RSpec.describe 'the authors books index page' do
     expect(current_path).to eq("/books")
     expect(page).to_not have_content(book.title)
   end
+
+  it "can display books published after a certain year user story 21" do
+    auth = Author.create!(name: "john doe", alive: false, number_books: 10)
+    book = auth.books.create!(title: "Titled Turtles: A love story", publication_date: 2057, fiction: true)
+    book2 = auth.books.create!(title: "Why", publication_date: 1667, fiction: false)
+    visit "/authors/#{auth.id}/books"
+    expect(page).to have_content("Title: Titled Turtles: A love story")
+    expect(page).to have_content("Why")
+    fill_in 'published', with: '2000'
+    click_on 'Submit Changes'
+    expect(current_path).to eq("/authors/#{auth.id}/books")
+    expect(page).to have_content("Title: Titled Turtles: A love story")
+    expect(page).to_not have_content("Why")
+  end
 end

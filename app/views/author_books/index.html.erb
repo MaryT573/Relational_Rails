@@ -10,5 +10,13 @@
   <%= link_to "Edit #{book.title}", "/books/#{book.id}/edit" %>
   <%= link_to "Delete #{book.title}", "/books/#{book.id}", method: :delete %>
   <% end %>
+
+  <%= form_with url: "/authors/#{@author.id}/books?published=#{params[:published]}", method: :get, local: true, skip_enforcing_utf8: true do |form|%>
+    <%= form.label :published, "Only return books with a date later than:" %>
+    <%= form.number_field :published %>
+    <%= form.submit "Submit Changes", name: nil %>
+  <% end %>
+
+
   <%= link_to "New Book", "/authors/#{@author.id}/books/new" %>
   <%= link_to "Sort Alphabetically", "/authors/#{@author.id}/books?sort=alpha" %>

@@ -2,8 +2,11 @@ class AuthorBooksController < ApplicationController
   def index
     @author = Author.find(params[:author_id])
     @books = @author.books
+    #require "pry"; binding.pry
     if params[:sort] == "alpha"
       @books = @author.books.sort_alpha
+    elsif params[:published]
+      @books= @author.books.where("publication_date > #{params[:published]}")
     else
       @books = @author.books
     end
