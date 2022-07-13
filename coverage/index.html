@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-07-13T11:51:50-06:00">2022-07-13T11:51:50-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-07-13T12:08:05-06:00">2022-07-13T12:08:05-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.38
+         1.39
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>341</b> relevant lines,
-    <span class="green"><b>341</b> lines covered</span> and
+    <b>354</b> relevant lines,
+    <span class="green"><b>354</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -99,7 +99,7 @@
             <td class="cell--number">19</td>
             <td class="cell--number">19</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">2.26</td>
+            <td class="cell--number">2.53</td>
             
           </tr>
         
@@ -143,7 +143,7 @@
             <td class="cell--number">7</td>
             <td class="cell--number">7</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">2.57</td>
+            <td class="cell--number">2.86</td>
             
           </tr>
         
@@ -326,9 +326,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#f120bf8e9bd08da54adc3a4e278549f5a8d63686" class="src_link" title="spec/features/authors/show_spec.rb">spec/features/authors/show_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">65</td>
-            <td class="cell--number">49</td>
-            <td class="cell--number">49</td>
+            <td class="cell--number">81</td>
+            <td class="cell--number">62</td>
+            <td class="cell--number">62</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -803,8 +803,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="3">
-            <span class="hits">12</span>
+          <li class="covered" data-hits="14" data-linenumber="3">
+            <span class="hits">14</span>
             
 
             
@@ -847,8 +847,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="8" data-linenumber="7">
-            <span class="hits">8</span>
+          <li class="covered" data-hits="9" data-linenumber="7">
+            <span class="hits">9</span>
             
 
             
@@ -1100,8 +1100,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="30">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="3" data-linenumber="30">
+            <span class="hits">3</span>
             
 
             
@@ -1111,8 +1111,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="31">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="3" data-linenumber="31">
+            <span class="hits">3</span>
             
 
             
@@ -1637,7 +1637,7 @@
 
             
 
-            <code class="ruby">  has_many :books</code>
+            <code class="ruby">  has_many :books, dependent: :destroy</code>
           </li>
         </div>
       
@@ -1664,8 +1664,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="8">
-            <span class="hits">12</span>
+          <li class="covered" data-hits="14" data-linenumber="8">
+            <span class="hits">14</span>
             
 
             
@@ -5445,8 +5445,8 @@
     
 
     <div class="t-line-summary">
-      <b>49</b> relevant lines.
-      <span class="green"><b>49</b> lines covered</span> and
+      <b>62</b> relevant lines.
+      <span class="green"><b>62</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -5590,18 +5590,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    visit &quot;/authors/#{auth.id}&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="14">
+          <li class="never" data-hits="" data-linenumber="13">
             
             
 
@@ -5612,13 +5601,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
+          <li class="covered" data-hits="1" data-linenumber="14">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    expect(page).to have_content(auth.alive)</code>
+            <code class="ruby">    visit &quot;/authors/#{auth.id}&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
+            
+            
+
+            
+
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -5629,7 +5629,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content(auth.number_books)</code>
+            <code class="ruby">    expect(page).to have_content(auth.alive)</code>
           </li>
         </div>
       
@@ -5640,7 +5640,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content(auth.created_at)</code>
+            <code class="ruby">    expect(page).to have_content(auth.number_books)</code>
           </li>
         </div>
       
@@ -5651,18 +5651,18 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content(auth.updated_at)</code>
+            <code class="ruby">    expect(page).to have_content(auth.created_at)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="19">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="19">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    expect(page).to have_content(auth.updated_at)</code>
           </li>
         </div>
       
@@ -5673,18 +5673,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="21">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="21">
+            
             
 
             
 
-            <code class="ruby">  it &#39;displays count of books user story 7&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -5695,7 +5695,7 @@
 
             
 
-            <code class="ruby">    auth = Author.create!(name: &quot;john doe&quot;, alive: false, number_books: 10)</code>
+            <code class="ruby">  it &#39;displays count of books user story 7&#39; do</code>
           </li>
         </div>
       
@@ -5706,7 +5706,7 @@
 
             
 
-            <code class="ruby">    book = auth.books.create!(title: &quot;Titled Turtles: A love story&quot;, publication_date: 2057, fiction: true)</code>
+            <code class="ruby">    auth = Author.create!(name: &quot;john doe&quot;, alive: false, number_books: 10)</code>
           </li>
         </div>
       
@@ -5717,7 +5717,7 @@
 
             
 
-            <code class="ruby">    book2 = auth.books.create!(title: &quot;Why&quot;, publication_date: 1667, fiction: false)</code>
+            <code class="ruby">    book = auth.books.create!(title: &quot;Titled Turtles: A love story&quot;, publication_date: 2057, fiction: true)</code>
           </li>
         </div>
       
@@ -5728,12 +5728,23 @@
 
             
 
+            <code class="ruby">    book2 = auth.books.create!(title: &quot;Why&quot;, publication_date: 1667, fiction: false)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="26">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    visit &quot;/authors/#{auth.id}&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="26">
+          <li class="never" data-hits="" data-linenumber="27">
             
             
 
@@ -5744,7 +5755,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="27">
+          <li class="covered" data-hits="1" data-linenumber="28">
             <span class="hits">1</span>
             
 
@@ -5755,7 +5766,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="28">
+          <li class="never" data-hits="" data-linenumber="29">
             
             
 
@@ -5766,24 +5777,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="29">
+          <li class="never" data-hits="" data-linenumber="30">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="30">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  it &quot;links to authors book user story 10&quot; do</code>
           </li>
         </div>
       
@@ -5794,7 +5794,7 @@
 
             
 
-            <code class="ruby">    auth = Author.create!(name: &quot;john doe&quot;, alive: false, number_books: 10)</code>
+            <code class="ruby">  it &quot;links to authors book user story 10&quot; do</code>
           </li>
         </div>
       
@@ -5805,7 +5805,7 @@
 
             
 
-            <code class="ruby">    book = auth.books.create!(title: &quot;Titled Turtles: A love story&quot;, publication_date: 2057, fiction: true)</code>
+            <code class="ruby">    auth = Author.create!(name: &quot;john doe&quot;, alive: false, number_books: 10)</code>
           </li>
         </div>
       
@@ -5816,7 +5816,7 @@
 
             
 
-            <code class="ruby">    visit &quot;/authors/#{auth.id}&quot;</code>
+            <code class="ruby">    book = auth.books.create!(title: &quot;Titled Turtles: A love story&quot;, publication_date: 2057, fiction: true)</code>
           </li>
         </div>
       
@@ -5827,7 +5827,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_link(&quot;Author&#39;s Book&quot;)</code>
+            <code class="ruby">    visit &quot;/authors/#{auth.id}&quot;</code>
           </li>
         </div>
       
@@ -5838,7 +5838,7 @@
 
             
 
-            <code class="ruby">    click_on &quot;Author&#39;s Book&quot;</code>
+            <code class="ruby">    expect(page).to have_link(&quot;Author&#39;s Book&quot;)</code>
           </li>
         </div>
       
@@ -5849,18 +5849,18 @@
 
             
 
-            <code class="ruby">    expect(current_path).to eq(&quot;/authors/#{auth.id}/books&quot;)</code>
+            <code class="ruby">    click_on &quot;Author&#39;s Book&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="37">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="37">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    expect(current_path).to eq(&quot;/authors/#{auth.id}/books&quot;)</code>
           </li>
         </div>
       
@@ -5871,18 +5871,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="39">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="39">
+            
             
 
             
 
-            <code class="ruby">  it &#39;can update author information user story 12&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -5893,7 +5893,7 @@
 
             
 
-            <code class="ruby">    auth = Author.create!(name: &quot;john doe&quot;, alive: true, number_books: 10)</code>
+            <code class="ruby">  it &#39;can update author information user story 12&#39; do</code>
           </li>
         </div>
       
@@ -5904,7 +5904,7 @@
 
             
 
-            <code class="ruby">    visit &quot;/authors/#{auth.id}&quot;</code>
+            <code class="ruby">    auth = Author.create!(name: &quot;john doe&quot;, alive: true, number_books: 10)</code>
           </li>
         </div>
       
@@ -5915,7 +5915,7 @@
 
             
 
-            <code class="ruby">    click_link &quot;Update Author&quot;</code>
+            <code class="ruby">    visit &quot;/authors/#{auth.id}&quot;</code>
           </li>
         </div>
       
@@ -5926,7 +5926,7 @@
 
             
 
-            <code class="ruby">    expect(current_path).to eq(&quot;/authors/#{auth.id}/edit&quot;)</code>
+            <code class="ruby">    click_link &quot;Update Author&quot;</code>
           </li>
         </div>
       
@@ -5937,7 +5937,7 @@
 
             
 
-            <code class="ruby">    fill_in &#39;name&#39;, with: &#39;Carl&#39;</code>
+            <code class="ruby">    expect(current_path).to eq(&quot;/authors/#{auth.id}/edit&quot;)</code>
           </li>
         </div>
       
@@ -5948,7 +5948,7 @@
 
             
 
-            <code class="ruby">    fill_in &#39;number_books&#39;, with: 20</code>
+            <code class="ruby">    fill_in &#39;name&#39;, with: &#39;Carl&#39;</code>
           </li>
         </div>
       
@@ -5959,7 +5959,7 @@
 
             
 
-            <code class="ruby">    select &#39;dead&#39;, from: &#39;alive&#39;</code>
+            <code class="ruby">    fill_in &#39;number_books&#39;, with: 20</code>
           </li>
         </div>
       
@@ -5970,7 +5970,7 @@
 
             
 
-            <code class="ruby">    click_on &#39;Submit Changes&#39;</code>
+            <code class="ruby">    select &#39;dead&#39;, from: &#39;alive&#39;</code>
           </li>
         </div>
       
@@ -5981,7 +5981,7 @@
 
             
 
-            <code class="ruby">    expect(current_path).to eq(&quot;/authors/#{auth.id}&quot;)</code>
+            <code class="ruby">    click_on &#39;Submit Changes&#39;</code>
           </li>
         </div>
       
@@ -5992,7 +5992,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content(&#39;Carl&#39;)</code>
+            <code class="ruby">    expect(current_path).to eq(&quot;/authors/#{auth.id}&quot;)</code>
           </li>
         </div>
       
@@ -6003,7 +6003,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content(&#39;Number of Books: 20&#39;)</code>
+            <code class="ruby">    expect(page).to have_content(&#39;Carl&#39;)</code>
           </li>
         </div>
       
@@ -6014,18 +6014,18 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content(&#39;Is author living?: false&#39;)</code>
+            <code class="ruby">    expect(page).to have_content(&#39;Number of Books: 20&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="52">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="52">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    expect(page).to have_content(&#39;Is author living?: false&#39;)</code>
           </li>
         </div>
       
@@ -6036,18 +6036,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="54">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="54">
+            
             
 
             
 
-            <code class="ruby">  it &quot;can delete authors user story 19&quot; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -6058,7 +6058,7 @@
 
             
 
-            <code class="ruby">    auth = Author.create!(name: &quot;john doe&quot;, alive: false, number_books: 10)</code>
+            <code class="ruby">  it &quot;can delete authors user story 19&quot; do</code>
           </li>
         </div>
       
@@ -6069,7 +6069,7 @@
 
             
 
-            <code class="ruby">    auth2 = Author.create!(name: &quot;Will Smith&quot;, alive: true, number_books: 20)</code>
+            <code class="ruby">    auth = Author.create!(name: &quot;john doe&quot;, alive: false, number_books: 10)</code>
           </li>
         </div>
       
@@ -6080,7 +6080,7 @@
 
             
 
-            <code class="ruby">    visit &quot;/authors&quot;</code>
+            <code class="ruby">    auth2 = Author.create!(name: &quot;Will Smith&quot;, alive: true, number_books: 20)</code>
           </li>
         </div>
       
@@ -6091,7 +6091,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content(auth.name)</code>
+            <code class="ruby">    visit &quot;/authors&quot;</code>
           </li>
         </div>
       
@@ -6102,7 +6102,7 @@
 
             
 
-            <code class="ruby">    visit &quot;/authors/#{auth.id}&quot;</code>
+            <code class="ruby">    expect(page).to have_content(auth.name)</code>
           </li>
         </div>
       
@@ -6113,7 +6113,7 @@
 
             
 
-            <code class="ruby">    click_link &quot;Delete Author&quot;</code>
+            <code class="ruby">    visit &quot;/authors/#{auth.id}&quot;</code>
           </li>
         </div>
       
@@ -6124,7 +6124,7 @@
 
             
 
-            <code class="ruby">    expect(current_path).to eq(&quot;/authors&quot;)</code>
+            <code class="ruby">    click_link &quot;Delete Author&quot;</code>
           </li>
         </div>
       
@@ -6135,7 +6135,7 @@
 
             
 
-            <code class="ruby">    expect(page).to_not have_content(auth.name)</code>
+            <code class="ruby">    expect(current_path).to eq(&quot;/authors&quot;)</code>
           </li>
         </div>
       
@@ -6146,12 +6146,23 @@
 
             
 
+            <code class="ruby">    expect(page).to_not have_content(auth.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="64">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    expect(page).to have_content(auth2.name)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="64">
+          <li class="never" data-hits="" data-linenumber="65">
             
             
 
@@ -6162,7 +6173,172 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="65">
+          <li class="never" data-hits="" data-linenumber="66">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="67">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  it &quot;can delete authors  and books user story 19&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="68">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    auth = Author.create!(name: &quot;john doe&quot;, alive: false, number_books: 10)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="69">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    auth2 = Author.create!(name: &quot;Will Smith&quot;, alive: true, number_books: 20)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="70">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    book = auth.books.create!(title: &quot;Titled Turtles: A love story&quot;, publication_date: 2057, fiction: true)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="71">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    book2 = auth.books.create!(title: &quot;Why&quot;, publication_date: 1667, fiction: false)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="72">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    visit &quot;/authors&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="73">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content(auth.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="74">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    visit &quot;/authors/#{auth.id}&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="75">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    click_link &quot;Delete Author&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="76">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(current_path).to eq(&quot;/authors&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="77">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to_not have_content(auth.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="78">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to_not have_content(book.title)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="79">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to_not have_content(book2.title)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="80">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="81">
             
             
 

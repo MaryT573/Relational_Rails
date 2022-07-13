@@ -10,6 +10,7 @@ RSpec.describe 'the authors show page' do
 
   it 'displays attributes user story 2' do
     auth = Author.create!(name: "john doe", alive: false, number_books: 10)
+
     visit "/authors/#{auth.id}"
 
     expect(page).to have_content(auth.alive)
@@ -61,5 +62,20 @@ RSpec.describe 'the authors show page' do
     expect(current_path).to eq("/authors")
     expect(page).to_not have_content(auth.name)
     expect(page).to have_content(auth2.name)
+  end
+
+  it "can delete authors  and books user story 19" do
+    auth = Author.create!(name: "john doe", alive: false, number_books: 10)
+    auth2 = Author.create!(name: "Will Smith", alive: true, number_books: 20)
+    book = auth.books.create!(title: "Titled Turtles: A love story", publication_date: 2057, fiction: true)
+    book2 = auth.books.create!(title: "Why", publication_date: 1667, fiction: false)
+    visit "/authors"
+    expect(page).to have_content(auth.name)
+    visit "/authors/#{auth.id}"
+    click_link "Delete Author"
+    expect(current_path).to eq("/authors")
+    expect(page).to_not have_content(auth.name)
+    expect(page).to_not have_content(book.title)
+    expect(page).to_not have_content(book2.title)
   end
 end
